@@ -41,5 +41,15 @@
         </div>
       </div>
     </div>
+    <script>
+      const apiUrl =
+        "https://api.openweathermap.org/data/2.5/weather?q=jalandhar&appid=1b7260f45f976ad0765651ef4fe62950&units=metric";
+
+      async function checkWeather() {
+        const response = await fetch(apiUrl);
+        
+      }
+      checkWeather();
+    </script>
   </body>
 </html>
