@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://fonts.google.com/specimen/Poppins" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,10 +12,24 @@
       href="https://fonts.googleapis.com/css2?family=Poppins"
       rel="stylesheet"
     />
-</head>
-<body>
+  </head>
+  <body>
     <div class="input-box">
-        <input type="password" placeholder="Enter the password">
+      <input type="password" placeholder="Enter the password" id="password" />
+      <img src="images/hidden.png" id="eyeicon" />
     </div>
-</body>
+    <script>
+      let eyeicon = document.getElementById("eyeicon");
+      let password = document.getElementById("password");
+      eyeicon.onclick = function () {
+        if (password.type == "password") {
+          password.type = "text";
+          eyeicon.src = "images/eye.png";
+        } else {
+          password.type = "password";
+          eyeicon.src = "images/hidden.png";
+        }
+      };
+    </script>
+  </body>
 </html>
